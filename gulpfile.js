@@ -7,6 +7,7 @@ const inquirer = require('inquirer');
 // gulp plugins and utils
 const livereload = require('gulp-livereload');
 const postcss = require('gulp-postcss');
+const sass = require('gulp-sass')(require('sass'));
 const zip = require('gulp-zip');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
@@ -46,7 +47,8 @@ function hbs(done) {
 
 function css(done) {
     pump([
-        src('assets/css/*.css', {sourcemaps: true}),
+        src(['assets/css/*.css', 'assets/css/*.scss'], {sourcemaps: true}),
+        sass().on('error', sass.logError),
         postcss([
             easyimport,
             colorFunction(),
@@ -89,7 +91,7 @@ function zipper(done) {
     ], handleError(done));
 }
 
-const cssWatcher = () => watch('assets/css/**', css);
+const cssWatcher = () => watch(['assets/css/**/*.css', 'assets/css/**/*.scss'], css);
 const jsWatcher = () => watch('assets/js/**', js);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
 const watcher = parallel(cssWatcher, jsWatcher, hbsWatcher);
