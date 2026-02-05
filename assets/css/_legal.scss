@@ -14,6 +14,11 @@
     max-width: variables.$container-width;
     margin: 0 auto;
     padding: 3rem variables.$gutter-width;
+    color: black;
+    font-family: variables.$base-font-family;
+    a {
+        text-decoration: underline;
+    }
 }
 
 @media screen and (min-width: variables.$break-tablet) {
