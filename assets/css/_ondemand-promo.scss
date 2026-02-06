@@ -1,0 +1,42 @@
+@use 'variables';
+
+.ondemand-promo {
+    background-color: black;
+    color: white;
+    padding: 4.5rem 2.5rem;
+    font-family: variables.$base-font-family;
+    font-weight: 500;
+    max-width: 1280px;
+    margin: 3rem auto;
+    background-size: cover;
+    background-position: center center;
+    .promo-heading {
+        font-size: 4.8rem;
+        margin-top: 0;
+        margin-bottom: 2.5rem;
+    }
+    .promo-list {
+        li {
+            margin-block: .5rem;
+        }
+    }
+    .promo-subheading {
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
+    }
+    .pricing {
+        line-height: 1.12;
+        font-size: 2rem;
+        span {
+            font-size: 6rem;
+            font-weight: 600;
+        }
+    }
+    @media screen and (min-width: variables.$break-tablet) {
+        .promo-info {
+            display: flex;
+            justify-content: space-between;
+        }
+        margin: 10rem auto;
+    }
+}
