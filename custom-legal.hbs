@@ -1,0 +1,13 @@
+{{!< default}} {{!-- The tag above means: insert everything in this file into the {body} tag of the default.hbs template --}} 
+<main class="main">
+    <div class="legal-container">
+        {{#post}}
+            <article>
+                <h1 class="legal-primary-heading">{{title}}</h1>
+                <div class="legal-backend-content">
+                    {{content}}
+                </div>
+            </article>
+        {{/post}}
+    </div>
+</main>

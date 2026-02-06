@@ -1,0 +1,37 @@
+@use 'variables';
+
+.legal-primary-heading {
+    font-size: 3.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: variables.$base-font-family;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+.legal-container {
+    max-width: variables.$container-width;
+    margin: 0 auto;
+    padding: 3rem variables.$gutter-width;
+    color: black;
+    font-family: variables.$base-font-family;
+    a {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: variables.$break-tablet) {
+    .legal-backend-content {
+        width: 80%;
+    }
+
+    .legal-container {
+        padding: 9.5rem variables.$gutter-width;
+    }
+
+    .legal-primary-heading {
+        font-size: 8rem;
+        margin-bottom: 5rem;
+    }
+}
