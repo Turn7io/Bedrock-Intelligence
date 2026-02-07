@@ -2,20 +2,40 @@
 
 .post-template .article {
     padding-top: 0;
+    padding-bottom: 0;
+    @media screen and (min-width: variables.$break-tablet) {
+        padding-bottom: 3rem;
+    }
+}
+
+.article-image {
+    max-width: 1250px;
+    margin-inline: auto !important;
 }
 
 .article-title {
     text-align: center;
     font-family: variables.$base-font-family;
     font-weight: 500;
+    max-width: 780px;
+    margin-inline: auto;
+    margin-top: 4rem;
+    font-size: 3rem;
+    @media screen and (min-width: variables.$break-tablet) {
+        font-size: 5.4rem;
+    }
 }
 
 .article-excerpt {
     text-align: center;
     font-family: variables.$base-font-family;
     font-weight: 600;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    margin-block: 1.5rem;
+    margin-inline: auto;
+    @media screen and (min-width: variables.$break-tablet) {
+        font-size: 2rem;
+    }
 }
 
 .article-author-byline {
@@ -26,14 +46,55 @@
     font-weight: 400;
 }
 
-.article .gh-content * {
+.article .gh-content {
+    * {
+        font-family: variables.$base-font-family;
+    }
+    p, ul, ol {
+        font-size: 1.6rem;
+        line-height: 1.75;
+        margin-bottom: 1.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.85rem;
+        font-weight: 600;
+    }
+}
+
+.article .gh-content {
+    padding-inline: variables.$gutter-width;
+    max-width: 880px;
+    margin: 2rem auto;
+}
+
+.author-inline {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0;
+    margin-bottom: 1rem;
+}
+
+.author-bio {
     font-family: variables.$base-font-family;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
 }
 
 .post-author-list {
     list-style: none;
     max-width: 1000px;
     margin: 4rem auto;
+}
+
+.author-name {
+    font-family: variables.$base-font-family;
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 .author-profile-social-link {
@@ -62,6 +123,12 @@
     }
 }
 
+.read-more {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
 .read-more-heading {
     font-size: 4.8rem;
     text-align: left;
@@ -74,6 +141,7 @@
 }
 
 .read-more-wrap {
-    max-width: 1280px;
-    margin: 10rem auto;
+    max-width: 1310px;
+    margin: 6rem auto;
+    padding-inline: variables.$gutter-width;
 }

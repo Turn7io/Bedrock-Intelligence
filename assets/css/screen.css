@@ -875,7 +875,6 @@ production stylesheet in assets/built/screen.css
 
 .post-card {
     position: relative;
-    grid-column: span 2;
     display: flex;
     flex-direction: column;
     background-size: cover;
@@ -1235,7 +1234,7 @@ html.no-infinite-scroll .pagination {
 }
 
 .post-template .article-header {
-    padding: 0 0 max(6.4vmin, 40px);
+    padding: 0 0 max(4.4vmin, 40px);
 }
 
 .page-template .article-header {
@@ -1307,39 +1306,6 @@ html.no-infinite-scroll .pagination {
 /* Canvas creates a multi-column, centered grid which the post
 is laid out on top of. Canvas just defines the grid, we don't
 use it for applying any other styles. */
-
-.gh-canvas,
-.kg-width-full.kg-content-wide {
-    --gap: max(4vmin, 20px);
-    --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
-    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2));
-    --full: minmax(var(--gap), 1fr);
-
-    display: grid;
-    grid-template-columns:
-        [full-start] var(--full)
-        [wide-start] var(--wide)
-        [main-start] var(--main) [main-end]
-        var(--wide) [wide-end]
-        var(--full) [full-end];
-}
-
-.gh-canvas > * {
-    grid-column: main-start / main-end;
-}
-
-.kg-width-wide,
-.kg-content-wide > div {
-    grid-column: wide-start / wide-end;
-}
-
-.kg-width-full {
-    grid-column: full-start / full-end;
-}
-
-.kg-width-full img {
-    width: 100%;
-}
 
 
 /* Content
@@ -1857,34 +1823,6 @@ iframe.instagram-media + script + :not([id]) {
 
 .footer-cta + .read-more-wrap {
     margin-top: max(12vmin, 72px);
-}
-
-.read-more {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 4vmin;
-}
-
-.read-more .post-card-tags {
-    display: none;
-}
-
-@media (max-width: 1000px) {
-    .read-more {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .read-more .post-card:nth-child(3) {
-        display: none;
-    }
-}
-
-@media (max-width: 700px) {
-    .read-more {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .read-more .post-card:nth-child(2) {
-        display: none;
-    }
 }
 
 /* 6.4. Comments
