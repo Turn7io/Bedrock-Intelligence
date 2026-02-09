@@ -1,0 +1,34 @@
+name: Deploy Theme with Node.js 20
+on:
+  push:
+    branches:
+      - main
+      - master
+      - staging
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      # Production deploy
+      - name: Deploy Theme to Production
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        uses: TryGhost/action-deploy-theme@v1.4.1
+        with:
+          api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
+          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
+
+      # Staging deploy
+      - name: Deploy Theme to Staging
+        if: github.ref == 'refs/heads/staging'
+        uses: TryGhost/action-deploy-theme@v1.4.1
+        with:
+          api-url: ${{ secrets.STAGING_GHOST_ADMIN_API_URL }}
+          api-key: ${{ secrets.STAGING_GHOST_ADMIN_API_KEY }}
