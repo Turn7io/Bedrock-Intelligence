@@ -39,14 +39,14 @@ which templates loop over to generate a list of posts. --}}
 
         <a class="post-card-content-link" href="{{url}}">
             <header class="post-card-header">
-                <div class="post-card-tags">
+                {{!-- <div class="post-card-tags">
                     {{#primary_tag}}
                         <span class="post-card-primary-tag">{{name}}</span>
                     {{/primary_tag}}
                     {{#if featured}}
                         <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
                     {{/if}}
-                </div>
+                </div> --}}
                 <h2 class="post-card-title">
                     {{#unless access}}
                     {{^has visibility="public"}}
@@ -64,10 +64,10 @@ which templates loop over to generate a list of posts. --}}
         </a>
 
         <footer class="post-card-meta">
-            <time class="post-card-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
-            {{#if reading_time}}
+            {{!-- <time class="post-card-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time> --}}
+            {{!-- {{#if reading_time}}
                 <span class="post-card-meta-length">{{reading_time}}</span>
-            {{/if}}
+            {{/if}} --}}
             {{#if @site.comments_enabled}}
                 {{comment_count}}
             {{/if}}
