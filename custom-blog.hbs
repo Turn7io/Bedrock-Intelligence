@@ -1,0 +1,27 @@
+{{!< default}} 
+<main id="site-main" class="site-main">
+    <div class="blog__hero">
+        <h1 class="blog__heading">Cybersecurity <i>Insights</i></h1>
+        <p class="blog__subheading">Cybersecurity insights for today’s threats.</p>
+    </div>
+    <div class="posts">
+        <div class="post-feed">
+            {{#get "posts" limit="9" include="authors,tags" as |first_batch| }}
+                {{#foreach posts}}
+                    {{> "post-card"}}
+                {{/foreach}}
+            {{/get}}
+        </div>
+
+        {{> "ondemand-promo"}}
+
+        <div class="post-feed">
+            {{#get "posts" limit="9" page="2" include="authors,tags" as |second_batch| }}
+                {{#foreach posts}}
+                    {{> "post-card"}}
+                {{/foreach}}
+                {{pagination}}
+            {{/get}}
+        </div>
+    </div>
+</main>

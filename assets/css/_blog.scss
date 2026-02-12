@@ -1,0 +1,28 @@
+@use "variables";
+
+.blog {
+    &__hero {
+        text-align: center;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__heading {
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 500;
+        font-weight: bold;
+        font-family: variables.$base-font-family;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        i {
+            font-family: variables.$heading-font-family;
+        }
+    }
+    &__subheading {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
