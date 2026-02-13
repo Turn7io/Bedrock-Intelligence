@@ -26,6 +26,7 @@
 
             <div class="post-card-content">
             <div class="post-card-content-link">
+                <a href="/blog" class="post-back-link">Back to Blogs</a>
                 <header class="post-card-header">
                     <h2 class="post-card-title">{{name}}</h2>
                 </header>
@@ -42,14 +43,18 @@
         </section>
         {{/tag}}
 
-        {{#foreach posts}}
-            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-            {{> "post-card"}}
-        {{/foreach}}
 
     </div>
+    <div class="posts">
+        <div class="post-feed">
+            {{#foreach posts}}
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+            {{/foreach}}
+        </div>
+        {{pagination}}
+    </div>
 
-    {{pagination}}
     
 </div>
 </main>
