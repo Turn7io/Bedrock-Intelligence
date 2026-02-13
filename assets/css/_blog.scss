@@ -25,4 +25,58 @@
         font-size: 20px;
         font-weight: 600;
     }
+
+    &__menu {
+        display: flex;
+        width: 100%;
+        margin-inline: auto;
+        max-width: 1300px;
+        padding: 3rem 0;
+        padding-bottom: 0;
+        justify-content: space-between;
+        border-bottom: 1px solid #000;
+    }
+    &__dropdown {
+        position: relative;
+        cursor: pointer;
+        .arrow {
+            margin-left: 0.25rem;
+            margin-bottom: 2px;
+        }
+        &.show {
+            .blog__tag-list {
+                position: absolute;
+                width: 20rem;
+                max-width: max-content;
+                z-index: 1;
+                height: auto;
+                box-shadow: 0px 4px 4px 0px rgba(0,0,0,.1);
+            }
+        }
+    }
+    &__dropdown-title {
+        padding: 1rem;
+    }
+    &__tag-list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-inline: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+    &__tag {
+        padding-left: 0;
+        margin-top: 0;
+        a {
+            padding: 1rem;
+            width: 100%;
+            display: block;
+            background: variables.$body-background-color;
+            &:hover {
+                background: white;
+            }
+        }
+    }
 }

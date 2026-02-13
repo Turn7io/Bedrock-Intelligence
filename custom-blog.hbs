@@ -4,6 +4,25 @@
         <h1 class="blog__heading">Cybersecurity <i>Insights</i></h1>
         <p class="blog__subheading">Cybersecurity insights for today’s threats.</p>
     </div>
+    <div class="blog__menu">
+        <div class="blog__dropdown">
+            <p class="blog__dropdown-title">Topics 
+                <svg xmlns="http://www.w3.org/2000/svg" class="blog__arrow-icon" width="11" height="6" viewBox="0 0 11 6" fill="none">
+                    <path
+                        d="M4.94527 5.78032C5.25209 6.07323 5.75036 6.07323 6.05718 5.78032L10.7699 1.2812C11.0767 0.988284 11.0767 0.512595 10.7699 0.219684C10.4631 -0.0732279 9.9648 -0.0732279 9.65798 0.219684L5.5 4.18922L1.34202 0.222027C1.0352 -0.0708848 0.53693 -0.0708848 0.230113 0.222027C-0.0767042 0.514938 -0.0767042 0.990627 0.230113 1.28354L4.94282 5.78266L4.94527 5.78032Z"
+                        fill="black" />
+                </svg>
+            </p>
+            <ul class="blog__tag-list">
+                {{#get "tags" limit="all" as |tags|}}
+                    {{#foreach tags}}
+                        <li class="blog__tag"><a href="{{url}}">{{name}}</a></li>
+                    {{/foreach}}
+                {{/get}}
+            </ul>
+        </div>
+        <button class="gh-search" data-ghost-search>{{> "icons/search"}}</button>
+    </div>
     <div class="posts">
         <div class="post-feed">
             {{#get "posts" limit="9" include="authors,tags" as |first_batch| }}
