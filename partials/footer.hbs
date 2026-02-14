@@ -1,0 +1,40 @@
+<footer class="site-footer" style="background-image: url('{{asset "images/bedrock-footer-bkgd.png"}}');">
+    <div class="footer-upper">
+        <div class="footer__cta">
+            <h2>Secure Your <i>Growth</i></h2>
+            <p>Bedrock Intelligence provides expert CISO OnDemand services for scalable cybersecurity and privacy programs.</p>
+            <a class="footer__cta-button" href="#">Schedule a Call</a>
+        </div>
+        <nav class="site-footer-nav">
+            <h3>Site Map</h3>
+            {{navigation type="secondary"}}
+        </nav>
+        <nav class="site-footer-nav">
+            <h3>Policies</h3>
+            <ul>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+        </nav>
+        <form class="footer-newsletter" action="#" method="post">
+            <p>Newsletter Sign up</p>
+        </form>
+    </div>
+    <div class="footer-bottom">
+        <ul class="footer-social-links">
+            <li class="footer-social-link-item">
+                <a href="https://www.linkedin.com/in/frank-osborne/" target="_blank" rel="noopener">
+                    {{>"icons/linkedin"}}
+                </a>
+            </li>
+            <li class="footer-social-link-item">
+                <a href="https://bsky.app/profile/bedrockintel.bsky.social" target="_blank" rel="noopener">
+                    {{>"icons/bluesky"}}
+                </a>
+            </li>
+        </ul>
+        <section class="copyright">&copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a>. All rights reserved</section>
+    </div>
+</footer>
