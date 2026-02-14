@@ -1,0 +1,114 @@
+@use "variables";
+
+.site-footer {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-upper,
+.footer-bottom {
+    max-width: 1280px;
+    padding: 0 variables.$gutter-width;
+    margin-inline: auto;
+}
+
+.footer__cta {
+    max-width: 390px;
+    text-align: left;
+    h2 {
+        color: #f8f7f5;
+        font-family: variables.$base-font-family;
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.11;
+        margin-top: 0;
+        i {
+            color: #d4cfc7;
+            font-family: variables.$heading-font-family;
+            font-style: italic;
+        }
+    }
+    @media screen and (min-width: variables.$break-xlarge) {
+        border-right: 0.5px solid rgba(212, 207, 199, 0.4);
+        padding-right: 4rem;
+        margin-right: 10rem;
+    }
+
+    p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 21px */
+    }
+
+    .footer__cta-button {
+        border-radius: 5px;
+        background-color: #d4cfc7;
+        padding: 10px 15px;
+        color: #222;
+        font-family: variables.$base-font-family;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 2rem;
+        border: 3px solid #d4cfc7;
+        &:hover {
+            background-color: transparent;
+            color: #d4cfc7;
+        }
+    }
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    svg {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    @media screen and (min-width: variables.$break-xlarge) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: unset;
+    }
+}
+
+.footer-social-link-item {
+    padding: 0;
+    margin-top: 0;
+}
+
+.footer-newsletter {
+    border-radius: 5px;
+    background: #d4cfc7;
+    color: #000;
+    width: 100%;
+    padding: 1.5rem;
+    @media screen and (min-width: variables.$break-xlarge) {
+        max-width: 245px;
+    }
+}
+
+.footer-upper {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    @media screen and (min-width: variables.$break-xlarge) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
