@@ -8,9 +8,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-inline: 1.5rem;
     }
     &__heading {
-        font-size: 54px;
+        font-size: 44px;
         font-style: normal;
         font-weight: 500;
         font-weight: bold;
@@ -20,17 +21,23 @@
         i {
             font-family: variables.$heading-font-family;
         }
+        @media screen and (min-width: variables.$break-tablet) {
+            font-size: 54px;
+        }
     }
     &__subheading {
         font-size: 20px;
         font-weight: 600;
     }
+    &__menu-wrapper {
+        padding-inline: variables.$gutter-width;
+        margin-inline: auto;
+        max-width: 1300px;
+    }
 
     &__menu {
         display: flex;
         width: 100%;
-        margin-inline: auto;
-        max-width: 1300px;
         padding: 3rem 0;
         padding-bottom: 0;
         justify-content: space-between;

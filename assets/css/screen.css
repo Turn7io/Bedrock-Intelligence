@@ -853,7 +853,7 @@ production stylesheet in assets/built/screen.css
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    padding: 3rem 2rem;
+    padding: 3rem 1.5rem;
     max-width: 1300px;
     margin-inline: auto;
 }
@@ -874,7 +874,8 @@ production stylesheet in assets/built/screen.css
     position: relative;
     overflow: hidden;
     display: block;
-    margin-bottom: 32px;
+    aspect-ratio: 9/6;
+    margin-bottom: 30px;
 }
 
 .post-card-image-link::after {
