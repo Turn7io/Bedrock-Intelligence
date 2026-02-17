@@ -849,26 +849,15 @@ production stylesheet in assets/built/screen.css
 .post-feed {
     position: relative;
     display: grid;
-    gap: 4.8vmin 4vmin;
-    grid-template-columns: repeat(6, 1fr);
-    padding: max(4.8vmin, 36px) 0 0;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    padding: 3rem 1.5rem;
+    max-width: 1300px;
+    margin-inline: auto;
 }
 
 :is(.tag-template, .author-template) .post-feed {
     margin-top: 4vmin;
-}
-
-@media (max-width: 991px) {
-    .post-feed {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 767px) {
-    .post-feed {
-        grid-template-columns: 1fr;
-        grid-gap: 40px;
-    }
 }
 
 .post-card {
@@ -883,7 +872,8 @@ production stylesheet in assets/built/screen.css
     position: relative;
     overflow: hidden;
     display: block;
-    margin-bottom: 32px;
+    aspect-ratio: 9/6;
+    margin-bottom: 30px;
 }
 
 .post-card-image-link::after {
