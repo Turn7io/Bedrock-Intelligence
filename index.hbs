@@ -2,7 +2,7 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-<div class="site-header-content outer{{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}">
+<div class="site-header-content home-hero {{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}">
 
     {{#if @custom.show_publication_cover}}
         {{#if @site.cover_image}}
@@ -20,35 +20,126 @@ into the {body} of the default.hbs template --}}
         {{/if}}
     {{/if}}
 
-    {{#match @custom.header_style "!=" "Hidden"}}
-        <div class="site-header-inner inner">
-            {{#match @custom.navigation_layout "Logo on cover"}}
-                {{#if @site.logo}}
-                    <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
-                {{else}}
-                    <h1 class="site-title">{{@site.title}}</h1>
-                {{/if}}
-            {{/match}}
-            {{#if @site.description}}
-                <p class="site-description">{{@site.description}}</p>
-            {{/if}}
-        </div>
-    {{/match}}
+    <p class="home-hero-subtitle">Get enterprise-grade cybersecurity leadership without the enterprise budget.</p>
+    <h1 class="home-hero-title">
+        <i>Reduce</i> small business <i>burdens</i> to keep consumers safe
+    </h1>
 
-</div>
+    <div>
+        <a href="#" class="primary-button">
+            Schedule a Call
+        </a>
+        <a href="#" class="secondary-button">
+            Learn More
+        </a>
+    </div>
 
-{{!-- The main content area --}}
-<main id="site-main" class="site-main outer">
-<div class="inner posts">
-
-    <div class="post-feed">
-        {{#foreach posts}}
+    <div class="home-hero-posts">
+        {{#foreach posts limit=3}}
             {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
             {{> "post-card"}}
         {{/foreach}}
     </div>
 
-    {{pagination}}
-
 </div>
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main">
+    <section class="home-who-its-for">
+        <div>
+            <p>Founders, Teams, Enterprises, Individuals</p>
+            <h2>
+                Who it’s For
+            </h2>
+            <p>
+                This service caters to customers that:
+            </p>
+            <ul>
+                <li>Have a limited budget for full-time staff.</li>
+                <li>Experience local or regional scarcity of cybersecurity professionals.</li>
+                <li>Have a small digital footprint, with regulatory obligations.</li>
+                <li>Are bound by regulatory mandates and need to prove compliance to external stakeholders.</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Startups (Series A)</h3>
+            <p>Limited budgets that need a security and privacy baseline to enable growth.</p>
+            <h3>Scale-ups (Series B–C)</h3>
+            <p>Expanding rapidly and requiring structured security and privacy programs.</p>
+            <h3>Established SMBs</h3>
+            <p>Regulatory obligations and limited or non-existent dedicated security staff.</p>
+            <h3>Venture Capital / Private Equity firms</h3>
+            <p>Requiring due-diligence and risk management support for portfolio companies.</p>
+        </div>
+    </section>
+    <section class="home-feed-and-newsletter-signup">
+        <div class="inner posts">
+            <div class="home-post-feed">
+                {{#foreach posts limit=6}}
+                    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                    {{> "post-card"}}
+                {{/foreach}}
+            </div>
+            {{pagination}}
+        </div>
+        <div class="home-feed-and-newsletter__sign-up">
+            <p>Real-world threats, no jargon</p>
+            <h2>Insights to Keep Your Business Secure</h2>
+            <ul>
+                <li>Practical playbooks to improve your security posture.</li>
+                <li>Expert analysis of the latest cyber threats and breaches.</li>
+                <li>Guidance tailored for CISOs, IT leaders, and growing businesses.</li>
+            </ul>
+        </div>
+    </section>
+    <section class="how-it-works">
+        <h2>How it Works</h2>
+        <div class="how-it-works-buckets">
+            <div class="how-it-works-bucket-item">
+                <h3>1</h3>
+                <p>Prioritize your biggest risks</p>
+                <p>Identify your top 5–10 business‑critical risks so you focus effort where it matters most.</p>
+            </div>
+            <div class="how-it-works-bucket-item">
+                <h3>2</h3>
+                <p>Design safeguards that fit your business</p>
+                <p>Recommend practical protections that strengthen security without slowing the way you work.</p>
+            </div>
+            <div class="how-it-works-bucket-item">
+                <h3>3</h3>
+                <p>Maintain visibility and momentum</p>
+                <p>Regularly review your risk landscape and adjust your strategies to stay ahead of emerging threats.</p>
+            </div>
+        </div>
+    </section>
+    <section class="home-solutions-for-security-challenges">
+        <div>
+            <h2>
+                Solutions for <i>Real Security</i> Challenges
+            </h2>
+            <p>
+                Solutions That Scale With You
+            </p>
+            <a href="#">
+                Check Out our Solutions
+            </a>
+        </div>
+        <div>
+            <h3>
+                1. Security Debt Reduction Sprint
+            </h3>
+            <h4>Problem</h4>
+            <p>"The Debt Clock is Ticking" – every day without strategic security leadership, your company accumulates security debt
+            that compounds over time, becoming more expensive to resolve.</p>
+            <h4>Risk</h4>
+            <p>94% of SMBs faced at least one cyberattack in 2024, indicating a high level of vulnerability among these businesses
+            NinjaOne.</p>
+        </div>
+    </section>
+    <section class="home-testimonial">
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+        layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+        <p>Sarah Chen</p>
+        <p>CTO, HealthTech Innovations</p>
+    </section>
 </main>

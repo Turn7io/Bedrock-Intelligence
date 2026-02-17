@@ -1,0 +1,135 @@
+@use 'variables';
+
+.home-hero {
+    color: white;
+    padding: 5rem variables.$gutter-width;
+    text-align: center;
+    font-family: variables.$base-font-family;
+    margin-bottom: 4rem;
+    @media screen and (min-width: variables.$break-tablet) {
+        padding-inline: variables.$gutter-width;
+        padding-top: 30rem;
+    }
+    .home-hero-subtitle {
+        color: variables.$warm-white;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 600;
+    }
+    h1 {
+        color: variables.$warm-white;
+        font-family: variables.$base-font-family;
+        font-size: 3.75rem;
+        @media screen and (min-width: variables.$break-tablet) {
+            font-size: 5.4rem;
+        }
+        i {
+            color: variables.$sandstone;
+            font-family: variables.$heading-font-family;
+            font-style: italic;
+        }
+    }
+}
+
+.home-hero-posts {
+    max-width: variables.$max-content-width;
+    margin: 0 auto;
+    padding: 3rem variables.$gutter-width;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    .post-card-title, .post-card-excerpt  {
+        color: white;
+    }
+}
+
+.home-who-its-for {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-inline: variables.$gutter-width;
+    padding-block: 3rem;
+    max-width: variables.$max-content-width;
+    margin: 0 auto;
+    @media screen and (min-width: variables.$break-tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding-block: 5rem;
+    }
+    @media screen and (min-width: variables.$break-xlarge) {
+        gap: 6rem;
+        padding-block: 8rem;
+    }
+}
+
+.how-it-works {
+    background-color: #000;
+    color: white;
+}
+
+.how-it-works-buckets {
+    max-width: variables.$max-content-width;
+    margin: 0 auto;
+    padding: 3rem variables.$gutter-width;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+.home-feed-and-newsletter-signup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-inline: variables.$gutter-width;
+    padding-block: 3rem;
+    max-width: variables.$max-content-width;
+    margin: 0 auto;
+    @media screen and (min-width: variables.$break-tablet) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+        padding-block: 5rem;
+    }
+    @media screen and (min-width: variables.$break-xlarge) {
+        gap: 6rem;
+        padding-block: 8rem;
+    }
+}
+
+.home-post-feed {
+
+    margin: 0 auto;
+    padding: 3rem variables.$gutter-width;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+.home-solutions-for-security-challenges {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-inline: variables.$gutter-width;
+    padding-block: 3rem;
+    max-width: variables.$max-content-width;
+    margin: 0 auto;
+    @media screen and (min-width: variables.$break-tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding-block: 5rem;
+    }
+    @media screen and (min-width: variables.$break-xlarge) {
+        gap: 6rem;
+        padding-block: 8rem;
+    }
+}
+
+.home-testimonial {
+    padding-inline: variables.$gutter-width;
+    padding-block: 3rem;
+    max-width: variables.$max-content-width;
+    margin: 0 auto;
+    text-align: center;
+}
