@@ -1,0 +1,64 @@
+@use 'variables';
+
+.home-testimonial {
+    padding-inline: variables.$gutter-width;
+    padding-block: 10rem;
+    max-width: variables.$max-content-width;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-testimonial-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @media screen and (min-width: variables.$break-tablet) {
+        border-left: 1px solid variables.$transparent-black;
+        padding-inline: 5rem;
+        max-width: 756px;
+        margin-inline: auto;
+        .home-testimonial-quote-icon {
+            position: absolute;
+            left: 13%;
+            bottom: 15.75%;
+        }
+    }
+}
+
+.home-testimonial-quote {
+    font-size: 2rem;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.48px;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.home-testimonial-bio-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    max-width: 300px;
+    margin-inline: auto;
+    .home-testimonial-image {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .home-testimonial-name {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: left;
+        font-style: normal;
+    }
+    .home-testimonial-job-title {
+        font-family: variables.$heading-font-family;
+        font-weight: 600;
+        font-size: 1.6rem;
+        text-align: left;
+        font-style: italic;
+    }
+}
