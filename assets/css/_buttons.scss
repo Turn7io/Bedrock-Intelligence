@@ -1,0 +1,52 @@
+@use "variables";
+
+.primary-btn {
+    display: block;
+    font-family: variables.$base-font-family;
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 150%;
+    background-color: variables.$dark-gray;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    margin-top: 2rem;
+    border-radius: 5px;
+    border: 3px solid variables.$dark-gray;
+    letter-spacing: -0.48px;
+    width: fit-content;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    &:hover {
+        background-color: transparent;
+        color: variables.$dark-gray;
+        border: 3px solid variables.$dark-gray;
+    }
+}
+
+.schedule-a-call-btn {
+    display: block;
+    font-family: variables.$base-font-family;
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 150%;
+    background-color: variables.$sandstone;
+    color: #222;
+    padding: 8px;
+    text-decoration: none;
+    margin-top: 0;
+    border-radius: 5px;
+    border: 3px solid variables.$sandstone;
+    letter-spacing: -0.48px;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    justify-self: end;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    &:hover {
+        background-color: transparent;
+        color: variables.$sandstone;
+        border: 3px solid variables.$sandstone;
+    }
+}
