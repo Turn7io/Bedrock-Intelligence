@@ -44,23 +44,6 @@
         line-height: 150%; /* 21px */
         margin-bottom: 1.5rem;
     }
-
-    .footer__cta-button {
-        border-radius: 5px;
-        background-color: #d4cfc7;
-        padding: 10px 15px;
-        color: #222;
-        font-family: variables.$base-font-family;
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 2rem;
-        border: 3px solid #d4cfc7;
-        &:hover {
-            background-color: transparent;
-            color: #d4cfc7;
-        }
-    }
 }
 
 .site-footer-nav {
@@ -112,6 +95,9 @@
 .footer-social-link-item {
     padding: 0;
     margin-top: 0;
+    a {
+        color: variables.$sandstone;
+    }
 }
 
 .footer-newsletter {

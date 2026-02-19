@@ -30,7 +30,7 @@
 .home-feed-and-newsletter {
     &__sign-up {
         @media screen and (min-width: variables.$break-tablet) {
-            border-left: 1px solid variables.$stone-gray;
+            border-left: 1px solid variables.$transparent-black;
             padding-left: 3rem;
         }
         ul {
