@@ -1,5 +1,30 @@
 @use 'variables';
 
+.primary-btn {
+    display: block;
+    font-family: variables.$base-font-family;
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 150%;
+    background-color: variables.$dark-gray;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    margin-top: 2rem;
+    border-radius: 5px;
+    border: 3px solid variables.$dark-gray;
+    font-variant: all-small-caps;
+    letter-spacing: -0.48px;
+    width: fit-content;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    &:hover {
+        background-color: transparent;
+        color: variables.$dark-gray;
+        border: 3px solid variables.$dark-gray;
+    }
+}
+
 .home-hero {
     color: white;
     padding: 5rem variables.$gutter-width;
@@ -29,6 +54,29 @@
             font-style: italic;
         }
     }
+    .primary-button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: #F4F0E9;
+        background-color: variables.$dark-gray;
+        border: 3px solid variables.$dark-gray;
+        &:hover {
+            background-color: transparent;
+            color: white;
+            border: 3px solid variables.$dark-gray;
+        }
+    }
+    .secondary-button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: white;
+        background-color: transparent;
+        border: 3px solid white;
+        &:hover {
+            background-color: variables.$dark-gray;
+            border: 3px solid white;
+        }
+    }
 }
 
 .home-hero-posts {
@@ -53,19 +101,105 @@
     margin: 0 auto;
     @media screen and (min-width: variables.$break-tablet) {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: .85fr 1fr;
         gap: 3rem;
         padding-block: 5rem;
     }
     @media screen and (min-width: variables.$break-xlarge) {
-        gap: 6rem;
+        gap: 12rem;
         padding-block: 8rem;
+    }
+    .home-who-its-for-subtitle {
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 150%; /* 24px */
+        letter-spacing: -0.48px;
+        color: variables.$stone-gray;
+        font-family: variables.$heading-font-family;
+    }
+    .home-who-its-for-heading {
+        font-size: 3.75rem;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        font-weight: 500;
+        @media screen and (min-width: variables.$break-tablet) {
+            font-size: 5.4rem;
+        }
+    }
+    .home-who-its-for-list {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 3.6rem;
+        font-weight: 500;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    p {
+        font-size: 2.4rem;
+        font-weight: 400;
     }
 }
 
 .how-it-works {
     background-color: #000;
     color: white;
+}
+
+.how-it-works-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-inline: variables.$gutter-width;
+    padding-block: 2rem;
+    max-width: variables.$max-content-width;
+    margin: 0 auto;
+    @media screen and (min-width: variables.$break-tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
+.how-it-works-heading {
+    font-size: 3.75rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    color: variables.$warm-white;
+    @media screen and (min-width: variables.$break-tablet) {
+        font-size: 5.4rem;
+    }
+}
+
+.schedule-a-call-btn {
+    display: block;
+    font-family: variables.$base-font-family;
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 150%;
+    background-color: variables.$sandstone;
+    color: #222;
+    padding: 8px;
+    text-decoration: none;
+    margin-top: 0;
+    border-radius: 5px;
+    border: 3px solid variables.$sandstone;
+    font-variant: all-small-caps;
+    letter-spacing: -0.48px;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    justify-self: end;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    &:hover {
+        background-color: transparent;
+        color: variables.$sandstone;
+        border: 3px solid variables.$sandstone;
+    }
 }
 
 .how-it-works-buckets {
@@ -95,10 +229,18 @@
         gap: 6rem;
         padding-block: 8rem;
     }
+    &__heading {
+        font-weight: 500;
+        font-size: 3.7rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        @media screen and (min-width: variables.$break-tablet) {
+            font-size: 5.4rem;
+        }
+    }
 }
 
 .home-post-feed {
-
     margin: 0 auto;
     padding: 3rem variables.$gutter-width;
     display: grid;
@@ -132,4 +274,18 @@
     max-width: variables.$max-content-width;
     margin: 0 auto;
     text-align: center;
+}
+
+.home-testimonial-quote {
+    font-size: 2rem;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.48px;
+    color: #000;
+    margin-bottom: 2rem;
+    max-width: 756px;
+    margin-inline: auto;
+
 }
