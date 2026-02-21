@@ -20,21 +20,24 @@ into the {body} of the default.hbs template --}}
         {{/if}}
     {{/if}}
     {{!-- Placeholder for video background --}}
-    {{!-- <video class="site-header-cover" src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoplay muted loop></video> --}}
+    <video class="site-header-cover" src="https://test-videos.co.uk/vids/jellyfish/mp4/h264/720/Jellyfish_720_10s_1MB.mp4" autoplay muted loop></video>
 
-    <p class="home-hero-subtitle">Get enterprise-grade cybersecurity leadership without the enterprise budget.</p>
-    <h1 class="home-hero-title">
-        <i>Reduce</i> small business <i>burdens</i> to keep consumers safe
-    </h1>
+    <div class="hero-content">
+        <p class="home-hero-subtitle">Get enterprise-grade cybersecurity leadership without the enterprise budget.</p>
+        <h1 class="home-hero-title">
+            <i>Reduce</i> small business <i>burdens</i> to keep consumers safe
+        </h1>
 
-    <div>
-        <a href="#" class="primary-button">
-            Schedule a Call
-        </a>
-        <a href="#" class="secondary-button">
-            Learn More
-        </a>
+        <div class="home-hero-button-wrapper">
+            <a href="#" class="primary-button">
+                Schedule a Call
+            </a>
+            <a href="#" class="secondary-button">
+                Learn More
+            </a>
+        </div>
     </div>
+
 
     <div class="home-hero-posts">
         {{#foreach posts limit=3}}
