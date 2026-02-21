@@ -111,8 +111,6 @@ production stylesheet in assets/built/screen.css
 .site-header-content {
     position: relative;
     z-index: 100;
-    display: flex;
-    align-items: center;
     padding-top: calc(19vmin + 44px);
     padding-bottom: 19vmin;
     text-align: center;
@@ -243,9 +241,6 @@ production stylesheet in assets/built/screen.css
 }
 
 @media (max-width: 767px) {
-    .has-cover .site-header-content {
-        min-height: 240px;
-    }
     .site-header-inner {
         gap: 16px;
     }
@@ -2015,15 +2010,6 @@ iframe.instagram-media + script + :not([id]) {
     color: #fff;
     letter-spacing: -0.015em;
     font-weight: 500;
-}
-
-.site-footer a {
-    color: rgba(255,255,255,0.7);
-}
-
-.site-footer a:hover {
-    color: rgba(255,255,255,1);
-    text-decoration: none;
 }
 
 .site-footer-nav ul {

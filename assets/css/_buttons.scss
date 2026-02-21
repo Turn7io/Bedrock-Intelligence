@@ -1,0 +1,59 @@
+@use "variables";
+
+// Base button mixin
+@mixin button-base {
+    display: block;
+    font-family: variables.$base-font-family;
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 150%;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 3px solid;
+    letter-spacing: -0.48px;
+    width: fit-content;
+    transition:
+        background-color 0.3s,
+        color 0.3s,
+        border-color 0.3s;
+}
+
+// Button variant mixin
+@mixin button-variant($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    border-color: $bg-color;
+
+    &:hover {
+        background-color: transparent;
+        color: $bg-color;
+        border-color: $bg-color;
+    }
+}
+
+// Primary button
+.primary-btn {
+    @include button-base;
+    @include button-variant(variables.$dark-gray, white);
+    margin-top: 2rem;
+}
+
+// Schedule call button
+.schedule-a-call-btn {
+    @include button-base;
+    @include button-variant(variables.$sandstone, #222);
+    @media screen and (min-width: variables.$break-tablet) {
+
+        margin-top: 0;
+        height: fit-content;
+        align-self: center;
+        justify-self: end;
+    }
+}
+
+.footer__cta-button {
+    @include button-base;
+    @include button-variant(variables.$sandstone, #222);
+}

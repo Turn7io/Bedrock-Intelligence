@@ -1,14 +1,24 @@
+// Colors
 $background-color: #f5f5f5;
+$warm-white: #F8F7F5;
+$sandstone: #D4CFC7;
 $body-background-color: #f4f0e9;
-$container-width: 1200px;
-$gutter-width: 1.5rem;
+$stone-gray: #5A5550;
+$dark-gray: #2C2C2C;
+$transparent-black: rgba(0, 0, 0, 0.50);
 
+// Breakpoints
 $break-mobile: 450px;
 $break-small: 600px;
 $break-tablet: 768px;
 $break-large: 600px;
 $break-xlarge: 1200px;
 $break-xxlarge: 1366px;
+
+// Global Spacing
+$gutter-width: 1.5rem;
+$container-width: 1200px;
+$max-content-width: 1280px;
 
 
 // Typography
